@@ -17,7 +17,7 @@
 
 10.times { Supplier.create!(name: Faker::Company.name) }
 
-10.times { Author.create!(first_name: Faker::Name.first_name,
+3.times { Author.create!(first_name: Faker::Name.first_name,
                         last_name: Faker::Name.last_name,
                         title: Faker::Quote.singular_siegler) }
 50.times { Customer.create!(first_name: Faker::Name.first_name,
@@ -35,20 +35,20 @@
                         tax: Faker::Number.decimal(l_digits: 0, r_digits: 1),
                         total: Faker::Number.decimal(l_digits: 3, r_digits: 1),
                         customer_id: rand(1..50)) }
-50.times { Book.create!(title: Faker::Quote.robin,
+10.times { Book.create!(title: Faker::Quote.robin,
                         year_published: rand(1800..2000),
                         isbn: Faker::Barcode.ean(8),
                         price: Faker::Number.decimal(l_digits: 2, r_digits: 1),
                         out_of_print: Faker::Boolean.boolean(true_ratio: 0.75),
                         views: rand(1000),
                         supplier_id: rand(1..10),
-                        author_id: rand(1..10)) }
+                        author_id: rand(1..3)) }
 
 1000.times { Review.create!(title: Faker::Quote.singular_siegler,
                         body: Faker::Quote.most_interesting_man_in_the_world,
                         rating: rand(1..5),
                         state: rand(0..2),
                         customer_id: rand(1..50),
-                        book_id: rand(1..50)) }
+                        book_id: rand(1..10)) }
 
 puts 'SEED done!!!!'
