@@ -1,0 +1,6 @@
+rails generate scaffold Author first_name last_name title
+rails generate scaffold Supplier name
+rails generate scaffold Book title barcode:integer year_published:integer isbn price:decimal out_of_print:boolean views:integer supplier:references author:references
+rails generate scaffold Review title body:text rating:integer state:integer customer:references book:references
+rails generate scaffold Customer first_name last_name title email visits:integer orders_count:integer lock_version:integer
+rails generate scaffold Order date_submited:time status:integer subtotal:decimal shipping:decimal tax:decimal total:decimal customer:references
