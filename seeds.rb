@@ -36,9 +36,8 @@
                         total: Faker::Number.decimal(l_digits: 3, r_digits: 1),
                         customer_id: rand(1..50)) }
 50.times { Book.create!(title: Faker::Quote.robin,
-                        barcode: Faker::Barcode.ean(8),
                         year_published: rand(1800..2000),
-                        isbn: Faker::Quote.matz,
+                        isbn: Faker::Barcode.ean(8),
                         price: Faker::Number.decimal(l_digits: 2, r_digits: 1),
                         out_of_print: Faker::Boolean.boolean(true_ratio: 0.75),
                         views: rand(1000),
