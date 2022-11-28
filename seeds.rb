@@ -44,7 +44,7 @@
                         supplier_id: rand(1..10),
                         author_id: rand(1..3)) }
 
-1000.times { Review.create!(title: Faker::Quote.singular_siegler,
+100.times { Review.create!(title: Faker::Quote.singular_siegler,
                         body: Faker::Quote.most_interesting_man_in_the_world,
                         rating: rand(1..5),
                         state: rand(0..2),
