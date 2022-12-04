@@ -1,0 +1,12 @@
+gem "bcrypt"
+gem "image_processing"
+gem 'faker'
+gem 'tailwindcss-rails'
+gem 'view_component'
+gem 'jwt'
+gem 'act'
+gem 'mini_magick'
+gem 'rack-cors'
+gem 'i18n'
+gem 'rspec'
+gem 'groupdate'
