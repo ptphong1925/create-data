@@ -17,11 +17,12 @@
 
 10.times { Supplier.create!(name: Faker::Company.name) }
 
-3.times { Author.create!(first_name: Faker::Name.first_name,
-                        last_name: Faker::Name.last_name,
-                        title: Faker::Quote.singular_siegler) }
-50.times { Customer.create!(first_name: Faker::Name.first_name,
+# 3.times { Author.create!(first_name: Faker::Name.first_name,
+#                         last_name: Faker::Name.last_name,
+#                         title: Faker::Quote.singular_siegler) }
+50.times { User.create!(first_name: Faker::Name.first_name,
                             last_name: Faker::Name.last_name,
+                            role: ['basic', 'admin', 'author'].sample,
                             title: Faker::Quote.singular_siegler,
                             email: Faker::Internet.free_email,
                             visits: rand(100),
