@@ -14,9 +14,6 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-
-10.times { Supplier.create!(name: Faker::Company.name) }
-
 # 3.times { Author.create!(first_name: Faker::Name.first_name,
 #                         last_name: Faker::Name.last_name,
 #                         title: Faker::Quote.singular_siegler) }
@@ -28,6 +25,8 @@
                             visits: rand(100),
                             orders_count: rand(100),
                             lock_version: rand(10)) }
+
+10.times { Supplier.create!(name: Faker::Company.name) }
 
 50.times { Order.create!(date_submited: Faker::Date.between(from: 50.days.ago, to: Date.today),
                         status: rand(0..3),
